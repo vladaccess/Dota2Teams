@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TeamsViewController.swift
 //  Dota2Teams
 //
 //  Created by Liquid on 10/03/2019.
@@ -8,13 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class TeamsViewController: UIViewController {
+    
+    var service: TeamService?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+//        service?.loadTeams(completion: { teams, error in
+//
+//        })
     }
-
-
+    
 }
-
