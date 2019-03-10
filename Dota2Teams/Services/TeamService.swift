@@ -23,8 +23,7 @@ class TeamWebService: TeamService {
     }
     
     func loadTeams(completion: @escaping ([Team]?, Error?) -> Void) {
-        manager.request(URL.teams).responseDecodableObject() { [weak self] (response: DataResponse<[Team]>) in
-            //Log
+        manager.request(URL.teams).responseDecodableObject() { (response: DataResponse<[Team]>) in
             completion(response.result.value, response.error)
         }
     }

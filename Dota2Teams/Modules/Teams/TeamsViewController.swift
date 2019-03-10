@@ -10,6 +10,8 @@ import UIKit
 
 class TeamsViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    
     var service: TeamService?
     
     override func viewDidLoad() {
