@@ -11,10 +11,11 @@ import UIKit
 struct Team {
     var id: Int
     var name: String
+    var rating: Double
 }
 
 extension Team: CustomStringConvertible {
     
-    var description: String { return "name:\(name), id:\(id)" }
+    var description: String { return "name:\(name), id:\(id), rating:\(rating)" }
     
 }

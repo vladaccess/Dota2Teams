@@ -1,5 +1,5 @@
 //
-//  TeamService.swift
+//  TeamWebService.swift
 //  Dota2Teams
 //
 //  Created by Liquid on 10/03/2019.
@@ -9,10 +9,6 @@
 import Alamofire
 import Foundation
 import CodableAlamofire
-
-protocol TeamService {
-    func loadTeams(completion: @escaping ([Team]?, Error?) -> Void)
-}
 
 class TeamWebService: TeamService {
     
