@@ -32,7 +32,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="tnG-6D-Jk1" secondAttribute="bottom" id="A3K-sX-5oC"/>
+                            <constraint firstAttribute="bottom" secondItem="tnG-6D-Jk1" secondAttribute="bottom" id="A3K-sX-5oC"/>
                             <constraint firstItem="tnG-6D-Jk1" firstAttribute="leading" secondItem="WjU-78-Oyl" secondAttribute="leading" id="X81-PJ-QZl"/>
                             <constraint firstItem="tnG-6D-Jk1" firstAttribute="top" secondItem="WjU-78-Oyl" secondAttribute="top" id="aH4-6d-FoP"/>
                             <constraint firstItem="WjU-78-Oyl" firstAttribute="trailing" secondItem="tnG-6D-Jk1" secondAttribute="trailing" id="cz7-Lw-U4y"/>

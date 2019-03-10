@@ -28,6 +28,7 @@
 		E9B968722235874500CFCBDC /* TeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B968702235874500CFCBDC /* TeamCollectionViewCell.swift */; };
 		E9B968732235874500CFCBDC /* TeamCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9B968712235874500CFCBDC /* TeamCollectionViewCell.xib */; };
 		E9B9687722358E3800CFCBDC /* TeamLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9687622358E3800CFCBDC /* TeamLayout.swift */; };
+		E9B9687922359CC600CFCBDC /* PlayedGamesFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9687822359CC600CFCBDC /* PlayedGamesFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		E9B968702235874500CFCBDC /* TeamCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewCell.swift; sourceTree = "<group>"; };
 		E9B968712235874500CFCBDC /* TeamCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamCollectionViewCell.xib; sourceTree = "<group>"; };
 		E9B9687622358E3800CFCBDC /* TeamLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamLayout.swift; sourceTree = "<group>"; };
+		E9B9687822359CC600CFCBDC /* PlayedGamesFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayedGamesFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				E9B9686222356FAF00CFCBDC /* LoadingViewController.swift */,
+				E9B9687822359CC600CFCBDC /* PlayedGamesFormatter.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				E9B968532235489700CFCBDC /* Team.swift in Sources */,
 				E9B968562235498100CFCBDC /* Team+Coding.swift in Sources */,
 				E9B9683E2235438000CFCBDC /* StoryboardViewControllerFactory.swift in Sources */,
+				E9B9687922359CC600CFCBDC /* PlayedGamesFormatter.swift in Sources */,
 				E9B9686E22357A5900CFCBDC /* TeamWebService.swift in Sources */,
 				E9B9687722358E3800CFCBDC /* TeamLayout.swift in Sources */,
 				E9B9685C22354EAB00CFCBDC /* ApiUrls.swift in Sources */,

@@ -12,6 +12,15 @@ struct Team {
     var id: Int
     var name: String
     var rating: Double
+    var wins: Double
+    var losses: Double
+    var tag: String
+}
+
+extension Team {
+    var allMatches: Double {
+        return wins + losses
+    }
 }
 
 extension Team: CustomStringConvertible {

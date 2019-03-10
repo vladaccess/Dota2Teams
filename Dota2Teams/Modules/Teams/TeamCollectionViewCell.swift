@@ -11,9 +11,11 @@ import UIKit
 class TeamCollectionViewCell: UICollectionViewCell {
 
     static let id = String(describing: TeamCollectionViewCell.self)
+    let playedMatchesFormatter = PlayedMatchesFormatter()
     
     @IBOutlet weak var teamName: UILabel!
-    @IBOutlet weak var teamRating: UILabel!
+    @IBOutlet weak var wins: UILabel!
+    @IBOutlet weak var losses: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,10 +24,17 @@ class TeamCollectionViewCell: UICollectionViewCell {
     
     var team: Team? {
         didSet {
-            guard let team = team else { return }
-            teamName.text = team.name
-            teamRating.text = String(team.rating)
+            setData()
         }
+    }
+    
+    func setData() {
+        guard let team = team else { return }
+        teamName.text = team.tag
+        wins.text = playedMatchesFormatter.string(forMatches: team.wins,
+                                                  allMatches: team.allMatches)
+        losses.text = playedMatchesFormatter.string(forMatches: team.losses,
+                                                  allMatches: team.allMatches)
     }
 }
 
