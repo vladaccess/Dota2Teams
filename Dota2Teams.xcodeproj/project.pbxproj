@@ -22,11 +22,12 @@
 		E9B968562235498100CFCBDC /* Team+Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B968552235498100CFCBDC /* Team+Coding.swift */; };
 		E9B9685822354A0900CFCBDC /* TeamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9685722354A0900CFCBDC /* TeamService.swift */; };
 		E9B9685C22354EAB00CFCBDC /* ApiUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9685B22354EAB00CFCBDC /* ApiUrls.swift */; };
-		E9B9685F223569FC00CFCBDC /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9685D223569FC00CFCBDC /* TeamTableViewCell.swift */; };
-		E9B96860223569FC00CFCBDC /* TeamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9B9685E223569FC00CFCBDC /* TeamTableViewCell.xib */; };
 		E9B9686322356FAF00CFCBDC /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9686222356FAF00CFCBDC /* LoadingViewController.swift */; };
 		E9B968672235716000CFCBDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B968662235716000CFCBDC /* ViewController.swift */; };
 		E9B9686E22357A5900CFCBDC /* TeamWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9686D22357A5900CFCBDC /* TeamWebService.swift */; };
+		E9B968722235874500CFCBDC /* TeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B968702235874500CFCBDC /* TeamCollectionViewCell.swift */; };
+		E9B968732235874500CFCBDC /* TeamCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9B968712235874500CFCBDC /* TeamCollectionViewCell.xib */; };
+		E9B9687722358E3800CFCBDC /* TeamLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9687622358E3800CFCBDC /* TeamLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,11 +50,12 @@
 		E9B968552235498100CFCBDC /* Team+Coding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Team+Coding.swift"; sourceTree = "<group>"; };
 		E9B9685722354A0900CFCBDC /* TeamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamService.swift; sourceTree = "<group>"; };
 		E9B9685B22354EAB00CFCBDC /* ApiUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUrls.swift; sourceTree = "<group>"; };
-		E9B9685D223569FC00CFCBDC /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
-		E9B9685E223569FC00CFCBDC /* TeamTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamTableViewCell.xib; sourceTree = "<group>"; };
 		E9B9686222356FAF00CFCBDC /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		E9B968662235716000CFCBDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E9B9686D22357A5900CFCBDC /* TeamWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamWebService.swift; sourceTree = "<group>"; };
+		E9B968702235874500CFCBDC /* TeamCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewCell.swift; sourceTree = "<group>"; };
+		E9B968712235874500CFCBDC /* TeamCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamCollectionViewCell.xib; sourceTree = "<group>"; };
+		E9B9687622358E3800CFCBDC /* TeamLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,10 +142,11 @@
 		E9B96840223543DF00CFCBDC /* Teams */ = {
 			isa = PBXGroup;
 			children = (
+				E9B9687622358E3800CFCBDC /* TeamLayout.swift */,
 				E9B96841223543EB00CFCBDC /* TeamsViewController.swift */,
 				E9B968462235444C00CFCBDC /* Teams.storyboard */,
-				E9B9685D223569FC00CFCBDC /* TeamTableViewCell.swift */,
-				E9B9685E223569FC00CFCBDC /* TeamTableViewCell.xib */,
+				E9B968702235874500CFCBDC /* TeamCollectionViewCell.swift */,
+				E9B968712235874500CFCBDC /* TeamCollectionViewCell.xib */,
 			);
 			path = Teams;
 			sourceTree = "<group>";
@@ -287,9 +290,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9B968472235444C00CFCBDC /* Teams.storyboard in Resources */,
-				E9B96860223569FC00CFCBDC /* TeamTableViewCell.xib in Resources */,
 				E981D0F6223542A1004F74F6 /* LaunchScreen.storyboard in Resources */,
 				E981D0F3223542A1004F74F6 /* App.xcassets in Resources */,
+				E9B968732235874500CFCBDC /* TeamCollectionViewCell.xib in Resources */,
 				E9B9684E223545AA00CFCBDC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +351,7 @@
 				E9B968562235498100CFCBDC /* Team+Coding.swift in Sources */,
 				E9B9683E2235438000CFCBDC /* StoryboardViewControllerFactory.swift in Sources */,
 				E9B9686E22357A5900CFCBDC /* TeamWebService.swift in Sources */,
+				E9B9687722358E3800CFCBDC /* TeamLayout.swift in Sources */,
 				E9B9685C22354EAB00CFCBDC /* ApiUrls.swift in Sources */,
 				E9B96842223543EB00CFCBDC /* TeamsViewController.swift in Sources */,
 				E9B9686322356FAF00CFCBDC /* LoadingViewController.swift in Sources */,
@@ -355,7 +359,7 @@
 				E981D0EC2235429E004F74F6 /* AppDelegate.swift in Sources */,
 				E9B9685822354A0900CFCBDC /* TeamService.swift in Sources */,
 				E9B968502235462200CFCBDC /* MainNavigationControllerFactory.swift in Sources */,
-				E9B9685F223569FC00CFCBDC /* TeamTableViewCell.swift in Sources */,
+				E9B968722235874500CFCBDC /* TeamCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

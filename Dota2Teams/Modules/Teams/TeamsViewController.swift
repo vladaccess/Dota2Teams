@@ -10,7 +10,7 @@ import UIKit
 
 class TeamsViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var service: TeamService?
     var teams = [Team]()
@@ -19,7 +19,7 @@ class TeamsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        prepareTable()
+        prepareCollection()
         loadItems()
     }
     
@@ -34,28 +34,27 @@ extension TeamsViewController {
             self.loadingViewController.remove()
             guard let teams = teams else { return }
             self.teams = teams
-            self.tableView.reloadData()
+            self.collectionView.reloadData()
         })
     }
     
-    func prepareTable() {
-        tableView.dataSource = self
-        tableView.register(UINib(nibName: TeamTableViewCell.id, bundle: nil),
-                           forCellReuseIdentifier: TeamTableViewCell.id)
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 100
+    func prepareCollection() {
+        collectionView.backgroundColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
+        collectionView.dataSource = self
+        collectionView.register(UINib(nibName: TeamCollectionViewCell.id, bundle: nil),
+                           forCellWithReuseIdentifier: TeamCollectionViewCell.id)
+        collectionView.collectionViewLayout = TeamLayout()
     }
 }
 
-extension TeamsViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView,
-                   numberOfRowsInSection section: Int) -> Int {
+extension TeamsViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return teams.count
     }
     
-    func tableView(_ tableView: UITableView,
-                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let teamCell = tableView.dequeueReusableCell(withIdentifier: TeamTableViewCell.id, for: indexPath) as! TeamTableViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let teamCell = collectionView.dequeueReusableCell(withReuseIdentifier: TeamCollectionViewCell.id, for: indexPath) as! TeamCollectionViewCell
         teamCell.team = teams[indexPath.row]
         return teamCell
     }
