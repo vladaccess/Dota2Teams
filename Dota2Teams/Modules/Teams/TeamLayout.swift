@@ -10,22 +10,26 @@ import UIKit
 
 class TeamLayout: UICollectionViewFlowLayout {
     
+    let cellInset: CGFloat = 20
+    let cellHeight: CGFloat = 80
+    
     override func prepare() {
         setupLayout()
     }
     
     func setupLayout() {
         minimumInteritemSpacing = 0
-        minimumLineSpacing = 20
-        sectionInset.top = 20
+        minimumLineSpacing = cellInset
+        sectionInset.top = cellInset
+        sectionInset.bottom = cellInset
     }
     
     override var itemSize: CGSize {
         get {
-            return CGSize(width: collectionView!.bounds.width - 40, height: 80)
+            return CGSize(width: collectionView!.bounds.width - cellInset * 2, height: cellHeight)
         }
         set {
-            self.itemSize = CGSize(width: collectionView!.bounds.width - 40, height: 80)
+            self.itemSize = CGSize(width: collectionView!.bounds.width - cellInset * 2, height: cellHeight)
         }
     }
     
