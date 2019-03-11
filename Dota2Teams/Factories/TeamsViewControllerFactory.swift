@@ -19,6 +19,7 @@ class TeamsViewControllerFactory: StoryboardViewControllerFactory<TeamsViewContr
         let viewController = super.create()
         viewController.title = "Teams"
         viewController.service = TeamWebService(manager: .default)
+        viewController.layout = TeamLayout()
         return viewController
     }
 }

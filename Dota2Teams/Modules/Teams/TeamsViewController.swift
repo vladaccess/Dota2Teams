@@ -14,10 +14,12 @@ class TeamsViewController: UIViewController {
     
     
     var service: TeamService?
+    lazy var loadingViewController = LoadingViewController()
+    var searchBar: UISearchBar = UISearchBar()
+    var layout: UICollectionViewLayout = UICollectionViewLayout()
+    
     var teams = [Team]()
     var filterTeams = [Team]()
-    lazy var loadingViewController = LoadingViewController()
-    var searchBar: UISearchBar?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +33,8 @@ class TeamsViewController: UIViewController {
 extension TeamsViewController {
     
     func setupSearchBar() {
-        searchBar = UISearchBar()
-        searchBar?.delegate = self
-        searchBar?.placeholder = "Search"
+        searchBar.delegate = self
+        searchBar.placeholder = "Search"
         navigationItem.titleView = searchBar
     }
     
@@ -42,7 +43,7 @@ extension TeamsViewController {
     }
     
     func isSearchBarEmpty() -> Bool {
-        return searchBar?.text?.isEmpty ?? true
+        return searchBar.text?.isEmpty ?? true
     }
     
     func isFiltering() -> Bool {
@@ -65,7 +66,7 @@ extension TeamsViewController {
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: TeamCollectionViewCell.id, bundle: nil),
                            forCellWithReuseIdentifier: TeamCollectionViewCell.id)
-        collectionView.collectionViewLayout = TeamLayout()
+        collectionView.collectionViewLayout = layout
         collectionView.keyboardDismissMode = .onDrag
     }
 }
