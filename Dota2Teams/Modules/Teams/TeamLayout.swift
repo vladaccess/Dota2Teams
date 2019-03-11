@@ -18,7 +18,6 @@ class TeamLayout: UICollectionViewFlowLayout {
     }
     
     func setupLayout() {
-        minimumInteritemSpacing = 0
         minimumLineSpacing = cellInset
         sectionInset.top = cellInset
         sectionInset.bottom = cellInset

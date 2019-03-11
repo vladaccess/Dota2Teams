@@ -80,12 +80,15 @@ extension TeamsViewController: UISearchBarDelegate {
 
 extension TeamsViewController: UICollectionViewDataSource {
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
         return isFiltering() ? filterTeams.count : teams.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let teamCell = collectionView.dequeueReusableCell(withReuseIdentifier: TeamCollectionViewCell.id, for: indexPath) as! TeamCollectionViewCell
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let teamCell = collectionView.dequeueReusableCell(withReuseIdentifier: TeamCollectionViewCell.id,
+                                                          for: indexPath) as! TeamCollectionViewCell
         teamCell.team = isFiltering() ? filterTeams[indexPath.row] : teams[indexPath.row]
         return teamCell
     }
