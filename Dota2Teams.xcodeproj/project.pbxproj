@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B006AF64DAB64A8CEF35742B /* Pods_Dota2Teams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E39DA1AB475ECB7E0C9B07 /* Pods_Dota2Teams.framework */; };
+		E93771112237F8520086D990 /* LoadingViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93771102237F8520086D990 /* LoadingViewControllerFactory.swift */; };
+		E93771132237FB700086D990 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93771122237FB700086D990 /* ViewControllerFactory.swift */; };
 		E981D0EC2235429E004F74F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E981D0EB2235429E004F74F6 /* AppDelegate.swift */; };
 		E981D0F3223542A1004F74F6 /* App.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E981D0F2223542A1004F74F6 /* App.xcassets */; };
 		E981D0F6223542A1004F74F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E981D0F4223542A1004F74F6 /* LaunchScreen.storyboard */; };
@@ -35,6 +37,8 @@
 		15E39DA1AB475ECB7E0C9B07 /* Pods_Dota2Teams.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dota2Teams.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E351A032ECF5D8FDC8D2677 /* Pods-Dota2Teams.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dota2Teams.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dota2Teams/Pods-Dota2Teams.debug.xcconfig"; sourceTree = "<group>"; };
 		BD6720D06BD0DA394541E722 /* Pods-Dota2Teams.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dota2Teams.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dota2Teams/Pods-Dota2Teams.release.xcconfig"; sourceTree = "<group>"; };
+		E93771102237F8520086D990 /* LoadingViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewControllerFactory.swift; sourceTree = "<group>"; };
+		E93771122237FB700086D990 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		E981D0E82235429E004F74F6 /* Dota2Teams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dota2Teams.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E981D0EB2235429E004F74F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E981D0F2223542A1004F74F6 /* App.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = App.xcassets; sourceTree = "<group>"; };
@@ -125,9 +129,11 @@
 		E9B9683C2235437500CFCBDC /* Factories */ = {
 			isa = PBXGroup;
 			children = (
+				E93771122237FB700086D990 /* ViewControllerFactory.swift */,
 				E9B9683D2235438000CFCBDC /* StoryboardViewControllerFactory.swift */,
 				E9B968482235449500CFCBDC /* TeamsViewControllerFactory.swift */,
 				E9B9684F2235462200CFCBDC /* MainNavigationControllerFactory.swift */,
+				E93771102237F8520086D990 /* LoadingViewControllerFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -351,6 +357,8 @@
 				E9B9684C2235459200CFCBDC /* MainNavigationController.swift in Sources */,
 				E9B968492235449500CFCBDC /* TeamsViewControllerFactory.swift in Sources */,
 				E9B968532235489700CFCBDC /* Team.swift in Sources */,
+				E93771132237FB700086D990 /* ViewControllerFactory.swift in Sources */,
+				E93771112237F8520086D990 /* LoadingViewControllerFactory.swift in Sources */,
 				E9B968562235498100CFCBDC /* Team+Coding.swift in Sources */,
 				E9B9683E2235438000CFCBDC /* StoryboardViewControllerFactory.swift in Sources */,
 				E9B9687922359CC600CFCBDC /* PlayedGamesFormatter.swift in Sources */,

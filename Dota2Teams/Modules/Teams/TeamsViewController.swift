@@ -14,7 +14,7 @@ class TeamsViewController: UIViewController {
     
     
     var service: TeamService?
-    lazy var loadingViewController = LoadingViewController()
+    lazy var loadingViewController = LoadingViewControllerFactory().create()
     var searchBar: UISearchBar = UISearchBar()
     var layout: UICollectionViewLayout = UICollectionViewLayout()
     
