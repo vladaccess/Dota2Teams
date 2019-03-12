@@ -18,7 +18,8 @@ class TeamsViewControllerFactory: StoryboardViewControllerFactory<TeamsViewContr
     override func create() -> TeamsViewController {
         let viewController = super.create()
         viewController.title = "Teams"
-        viewController.service = TeamWebService(manager: .default)
+        viewController.service = TeamWebService(manager: .default,
+                                                logger: ConsoleLoggingService())
         viewController.layout = TeamLayout()
         return viewController
     }

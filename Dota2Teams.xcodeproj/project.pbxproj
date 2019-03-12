@@ -10,6 +10,8 @@
 		B006AF64DAB64A8CEF35742B /* Pods_Dota2Teams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E39DA1AB475ECB7E0C9B07 /* Pods_Dota2Teams.framework */; };
 		E93771112237F8520086D990 /* LoadingViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93771102237F8520086D990 /* LoadingViewControllerFactory.swift */; };
 		E93771132237FB700086D990 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93771122237FB700086D990 /* ViewControllerFactory.swift */; };
+		E93771162237FFF40086D990 /* LoggingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93771152237FFF40086D990 /* LoggingService.swift */; };
+		E93771182238002B0086D990 /* ConsoleLoggingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93771172238002B0086D990 /* ConsoleLoggingService.swift */; };
 		E981D0EC2235429E004F74F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E981D0EB2235429E004F74F6 /* AppDelegate.swift */; };
 		E981D0F3223542A1004F74F6 /* App.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E981D0F2223542A1004F74F6 /* App.xcassets */; };
 		E981D0F6223542A1004F74F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E981D0F4223542A1004F74F6 /* LaunchScreen.storyboard */; };
@@ -39,6 +41,8 @@
 		BD6720D06BD0DA394541E722 /* Pods-Dota2Teams.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dota2Teams.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dota2Teams/Pods-Dota2Teams.release.xcconfig"; sourceTree = "<group>"; };
 		E93771102237F8520086D990 /* LoadingViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewControllerFactory.swift; sourceTree = "<group>"; };
 		E93771122237FB700086D990 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		E93771152237FFF40086D990 /* LoggingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingService.swift; sourceTree = "<group>"; };
+		E93771172238002B0086D990 /* ConsoleLoggingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleLoggingService.swift; sourceTree = "<group>"; };
 		E981D0E82235429E004F74F6 /* Dota2Teams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dota2Teams.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E981D0EB2235429E004F74F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E981D0F2223542A1004F74F6 /* App.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = App.xcassets; sourceTree = "<group>"; };
@@ -91,6 +95,15 @@
 				BD6720D06BD0DA394541E722 /* Pods-Dota2Teams.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E93771142237FFE00086D990 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				E93771152237FFF40086D990 /* LoggingService.swift */,
+				E93771172238002B0086D990 /* ConsoleLoggingService.swift */,
+			);
+			path = Logging;
 			sourceTree = "<group>";
 		};
 		E981D0DF2235429E004F74F6 = {
@@ -179,6 +192,7 @@
 		E9B968542235497800CFCBDC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E93771142237FFE00086D990 /* Logging */,
 				E9B9686F22357AA400CFCBDC /* Coding */,
 				E9B9686B22357A3600CFCBDC /* Teams */,
 				E9B9685B22354EAB00CFCBDC /* ApiUrls.swift */,
@@ -358,9 +372,11 @@
 				E9B968492235449500CFCBDC /* TeamsViewControllerFactory.swift in Sources */,
 				E9B968532235489700CFCBDC /* Team.swift in Sources */,
 				E93771132237FB700086D990 /* ViewControllerFactory.swift in Sources */,
+				E93771162237FFF40086D990 /* LoggingService.swift in Sources */,
 				E93771112237F8520086D990 /* LoadingViewControllerFactory.swift in Sources */,
 				E9B968562235498100CFCBDC /* Team+Coding.swift in Sources */,
 				E9B9683E2235438000CFCBDC /* StoryboardViewControllerFactory.swift in Sources */,
+				E93771182238002B0086D990 /* ConsoleLoggingService.swift in Sources */,
 				E9B9687922359CC600CFCBDC /* PlayedGamesFormatter.swift in Sources */,
 				E9B9686E22357A5900CFCBDC /* TeamWebService.swift in Sources */,
 				E9B9687722358E3800CFCBDC /* TeamLayout.swift in Sources */,
