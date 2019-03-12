@@ -63,6 +63,7 @@ extension TeamsViewController {
     
     func prepareCollection() {
         collectionView.backgroundColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
+        collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: TeamCollectionViewCell.id, bundle: nil),
                            forCellWithReuseIdentifier: TeamCollectionViewCell.id)
@@ -91,5 +92,16 @@ extension TeamsViewController: UICollectionViewDataSource {
                                                           for: indexPath) as! TeamCollectionViewCell
         teamCell.team = isFiltering() ? filterTeams[indexPath.row] : teams[indexPath.row]
         return teamCell
+    }
+}
+
+extension TeamsViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+        let vc = PlayersViewControllerFactory().create()
+        let team = isFiltering() ? filterTeams[indexPath.row] : teams[indexPath.row]
+        vc.teamID = team.id
+        vc.title = team.tag
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -24,6 +24,7 @@ class TeamCollectionViewCell: UICollectionViewCell {
     
     var team: Team? {
         didSet {
+            guard let _ = team else { return }
             setData()
         }
     }

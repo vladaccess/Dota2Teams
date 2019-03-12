@@ -22,9 +22,3 @@ extension Team {
         return wins + losses
     }
 }
-
-extension Team: CustomStringConvertible {
-    
-    var description: String { return "name:\(name), id:\(id), rating:\(rating)" }
-    
-}
