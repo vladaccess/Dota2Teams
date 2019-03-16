@@ -10,7 +10,7 @@ import UIKit
 
 class PlayersViewController: UIViewController {
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var tableView: UITableView!
     
     var teamID = 0
     var service: PlayerService?
@@ -18,7 +18,7 @@ class PlayersViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        prepareCollection()
+        prepareTable()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,31 +32,24 @@ extension PlayersViewController {
         service?.loadPlayers(from: teamID, completion: { [weak self] players, error in
             guard let players = players else { return }
             self?.players = players
-            self?.collectionView.reloadData()
+            self?.tableView.reloadData()
         })
     }
     
-    func prepareCollection() {
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.register(UINib(nibName: PlayerCollectionViewCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: PlayerCollectionViewCell.reuseIdentifier)
+    func prepareTable() {
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: PlayerTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: PlayerTableViewCell.reuseIdentifier)
     }
 }
 
-extension PlayersViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+extension PlayersViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return players.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlayerCollectionViewCell.reuseIdentifier, for: indexPath) as! PlayerCollectionViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: PlayerTableViewCell.reuseIdentifier, for: indexPath) as! PlayerTableViewCell
         cell.player = players[indexPath.row]
         return cell
-    }
-}
-
-extension PlayersViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width, height: 100)
     }
 }

@@ -1,19 +1,18 @@
 //
-//  PlayerCollectionViewCell.swift
+//  PlayerTableViewCell.swift
 //  Dota2Teams
 //
-//  Created by Liquid on 12/03/2019.
+//  Created by Liquid on 16/03/2019.
 //  Copyright © 2019 attom. All rights reserved.
 //
 
 import UIKit
 
-class PlayerCollectionViewCell: UICollectionViewCell {
+class PlayerTableViewCell: UITableViewCell {
     
-    static let reuseIdentifier = String(describing: PlayerCollectionViewCell.self)
-    
-    @IBOutlet weak var playerAvatar: UIImageView!
     @IBOutlet weak var playerName: UILabel!
+    
+    static let reuseIdentifier = String(describing: PlayerTableViewCell.self)
     
     var player: Player? {
         didSet {
@@ -21,5 +20,5 @@ class PlayerCollectionViewCell: UICollectionViewCell {
             playerName.text = player.name
         }
     }
-
+    
 }

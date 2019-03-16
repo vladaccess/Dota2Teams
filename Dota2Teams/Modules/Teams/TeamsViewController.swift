@@ -17,6 +17,7 @@ class TeamsViewController: UIViewController {
     lazy var loadingViewController = LoadingViewControllerFactory().create()
     var searchBar: UISearchBar = UISearchBar()
     var layout: UICollectionViewLayout = UICollectionViewLayout()
+    var presenter: ITeamPresenter?
     
     var teams = [Team]()
     var filterTeams = [Team]()
@@ -98,10 +99,8 @@ extension TeamsViewController: UICollectionViewDataSource {
 extension TeamsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
-        let vc = PlayersViewControllerFactory().create()
         let team = isFiltering() ? filterTeams[indexPath.row] : teams[indexPath.row]
-        vc.teamID = team.id
-        vc.title = team.tag
-        navigationController?.pushViewController(vc, animated: true)
+        let vc = presenter?.didTapTeam(team: team)
+        navigationController?.pushViewController(vc!, animated: true)
     }
 }
