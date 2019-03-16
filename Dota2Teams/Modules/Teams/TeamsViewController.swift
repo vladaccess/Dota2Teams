@@ -8,19 +8,23 @@
 
 import UIKit
 
+protocol TeamsViewControllerDelegate: class {
+    func teamsViewControllerDidSelect(team: Team)
+}
+
 class TeamsViewController: UIViewController {
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
     
     var service: TeamService?
-    lazy var loadingViewController = LoadingViewControllerFactory().create()
-    var searchBar: UISearchBar = UISearchBar()
+    private lazy var loadingViewController = LoadingViewControllerFactory().create()
+    private var searchBar: UISearchBar = UISearchBar()
     var layout: UICollectionViewLayout = UICollectionViewLayout()
-    var presenter: ITeamPresenter?
+    weak var delegate: TeamsViewControllerDelegate?
     
-    var teams = [Team]()
-    var filterTeams = [Team]()
+    private var teams = [Team]()
+    private var filterTeams = [Team]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +35,7 @@ class TeamsViewController: UIViewController {
     
 }
 
-extension TeamsViewController {
+private extension TeamsViewController {
     
     func setupSearchBar() {
         searchBar.delegate = self
@@ -100,7 +104,6 @@ extension TeamsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
         let team = isFiltering() ? filterTeams[indexPath.row] : teams[indexPath.row]
-        let vc = presenter?.didTapTeam(team: team)
-        navigationController?.pushViewController(vc!, animated: true)
+        delegate?.teamsViewControllerDidSelect(team: team)
     }
 }

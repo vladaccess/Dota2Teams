@@ -11,11 +11,11 @@ import UIKit
 class TeamCollectionViewCell: UICollectionViewCell {
 
     static let id = String(describing: TeamCollectionViewCell.self)
-    let playedMatchesFormatter = PlayedMatchesFormatter()
+    private let playedMatchesFormatter = PlayedMatchesFormatter()
     
-    @IBOutlet weak var teamName: UILabel!
-    @IBOutlet weak var wins: UILabel!
-    @IBOutlet weak var losses: UILabel!
+    @IBOutlet private weak var teamName: UILabel!
+    @IBOutlet private weak var wins: UILabel!
+    @IBOutlet private weak var losses: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,7 +24,6 @@ class TeamCollectionViewCell: UICollectionViewCell {
     
     var team: Team? {
         didSet {
-            guard let _ = team else { return }
             setData()
         }
     }
@@ -39,7 +38,7 @@ class TeamCollectionViewCell: UICollectionViewCell {
     }
 }
 
-extension TeamCollectionViewCell {
+private extension TeamCollectionViewCell {
     func setupShadow() {
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOffset = CGSize(width: 0, height: 2)

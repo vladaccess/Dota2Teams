@@ -21,7 +21,6 @@ class TeamsViewControllerFactory: StoryboardViewControllerFactory<TeamsViewContr
         viewController.service = TeamWebService(manager: .default,
                                                 logger: ConsoleLoggingService())
         viewController.layout = TeamLayout()
-        viewController.presenter = TeamPresenter()
         return viewController
     }
 }

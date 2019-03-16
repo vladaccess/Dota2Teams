@@ -33,6 +33,6 @@ class TeamLayout: UICollectionViewFlowLayout {
     }
     
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint) -> CGPoint {
-        return collectionView!.contentOffset
+        return collectionView?.contentOffset ?? super.targetContentOffset(forProposedContentOffset: proposedContentOffset)
     }
 }

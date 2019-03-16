@@ -14,8 +14,8 @@ import CodableAlamofire
 
 class PlayerWebService: PlayerService {
     
-    let manager: Alamofire.SessionManager
-    let logger: LoggingService
+    private let manager: Alamofire.SessionManager
+    private let logger: LoggingService
     
     init(manager: Alamofire.SessionManager,
          logger: LoggingService) {

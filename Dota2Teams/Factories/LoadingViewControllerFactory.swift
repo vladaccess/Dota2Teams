@@ -8,10 +8,10 @@
 
 import UIKit
 
-class LoadingViewControllerFactory: ViewControllerFactory {
+class LoadingViewControllerFactory: ViewControllerFactory<LoadingViewController> {
     
-    func create() -> LoadingViewController {
-        let viewController = LoadingViewController()
+    override func create() -> LoadingViewController {
+        let viewController = super.create()
         viewController.view.backgroundColor = .white
         return viewController
     }

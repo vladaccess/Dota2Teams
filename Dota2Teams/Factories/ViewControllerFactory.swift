@@ -8,7 +8,9 @@
 
 import UIKit
 
-protocol ViewControllerFactory {
-    associatedtype T: UIViewController
-    func create() -> T
+class ViewControllerFactory<T: UIViewController> {
+    
+    func create() -> T {
+        return T()
+    }
 }

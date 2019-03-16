@@ -20,12 +20,19 @@
 		E9464D4A22382EF200A3F595 /* Player+Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9464D4922382EF200A3F595 /* Player+Coding.swift */; };
 		E9464D4D22382F8800A3F595 /* PlayerWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9464D4C22382F8800A3F595 /* PlayerWebService.swift */; };
 		E9464D4F2238302B00A3F595 /* PlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9464D4E2238302B00A3F595 /* PlayerService.swift */; };
-		E957A002223B19730014EAC7 /* TeamPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E957A001223B19730014EAC7 /* TeamPresenter.swift */; };
 		E981D0EC2235429E004F74F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E981D0EB2235429E004F74F6 /* AppDelegate.swift */; };
 		E981D0F3223542A1004F74F6 /* App.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E981D0F2223542A1004F74F6 /* App.xcassets */; };
 		E981D0F6223542A1004F74F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E981D0F4223542A1004F74F6 /* LaunchScreen.storyboard */; };
 		E9AB8331223D0F9F00953939 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB832F223D0F9F00953939 /* PlayerTableViewCell.swift */; };
 		E9AB8332223D0F9F00953939 /* PlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9AB8330223D0F9F00953939 /* PlayerTableViewCell.xib */; };
+		E9AB8343223D45B700953939 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB8342223D45B700953939 /* MainCoordinator.swift */; };
+		E9AB8345223D5D2900953939 /* PlayerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB8344223D5D2900953939 /* PlayerCoordinator.swift */; };
+		E9AB8347223D5E3B00953939 /* TeamCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB8346223D5E3B00953939 /* TeamCoordinator.swift */; };
+		E9AB834A223D836E00953939 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB8349223D836E00953939 /* Coordinator.swift */; };
+		E9AB834E223E672600953939 /* MainCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB834D223E672600953939 /* MainCoordinatorFactory.swift */; };
+		E9AB8350223E68CF00953939 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB834F223E68CF00953939 /* CoordinatorFactory.swift */; };
+		E9AB8352223E68FB00953939 /* TeamCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB8351223E68FB00953939 /* TeamCoordinatorFactory.swift */; };
+		E9AB8354223E697A00953939 /* PlayerCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB8353223E697A00953939 /* PlayerCoordinatorFactory.swift */; };
 		E9B9683E2235438000CFCBDC /* StoryboardViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9683D2235438000CFCBDC /* StoryboardViewControllerFactory.swift */; };
 		E9B96842223543EB00CFCBDC /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B96841223543EB00CFCBDC /* TeamsViewController.swift */; };
 		E9B968472235444C00CFCBDC /* Teams.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B968462235444C00CFCBDC /* Teams.storyboard */; };
@@ -62,7 +69,6 @@
 		E9464D4922382EF200A3F595 /* Player+Coding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Player+Coding.swift"; sourceTree = "<group>"; };
 		E9464D4C22382F8800A3F595 /* PlayerWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerWebService.swift; sourceTree = "<group>"; };
 		E9464D4E2238302B00A3F595 /* PlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerService.swift; sourceTree = "<group>"; };
-		E957A001223B19730014EAC7 /* TeamPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPresenter.swift; sourceTree = "<group>"; };
 		E981D0E82235429E004F74F6 /* Dota2Teams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dota2Teams.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E981D0EB2235429E004F74F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E981D0F2223542A1004F74F6 /* App.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = App.xcassets; sourceTree = "<group>"; };
@@ -70,6 +76,14 @@
 		E981D0F7223542A1004F74F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9AB832F223D0F9F00953939 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		E9AB8330223D0F9F00953939 /* PlayerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerTableViewCell.xib; sourceTree = "<group>"; };
+		E9AB8342223D45B700953939 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		E9AB8344223D5D2900953939 /* PlayerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCoordinator.swift; sourceTree = "<group>"; };
+		E9AB8346223D5E3B00953939 /* TeamCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCoordinator.swift; sourceTree = "<group>"; };
+		E9AB8349223D836E00953939 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		E9AB834D223E672600953939 /* MainCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorFactory.swift; sourceTree = "<group>"; };
+		E9AB834F223E68CF00953939 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		E9AB8351223E68FB00953939 /* TeamCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCoordinatorFactory.swift; sourceTree = "<group>"; };
+		E9AB8353223E697A00953939 /* PlayerCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCoordinatorFactory.swift; sourceTree = "<group>"; };
 		E9B9683D2235438000CFCBDC /* StoryboardViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardViewControllerFactory.swift; sourceTree = "<group>"; };
 		E9B96841223543EB00CFCBDC /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		E9B968462235444C00CFCBDC /* Teams.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Teams.storyboard; sourceTree = "<group>"; };
@@ -169,21 +183,53 @@
 		E981D0EA2235429E004F74F6 /* Dota2Teams */ = {
 			isa = PBXGroup;
 			children = (
+				E9AB834B223D838C00953939 /* Flow */,
 				E9B968652235715500CFCBDC /* Foundation */,
 				E9B968642235714800CFCBDC /* App */,
 				E9B9686122356FA100CFCBDC /* Presentation */,
 				E9B968542235497800CFCBDC /* Services */,
 				E9B968512235488F00CFCBDC /* Entities */,
 				E9B9683C2235437500CFCBDC /* Factories */,
+				E9AB8348223D835500953939 /* Abstraction */,
 				E9B9683F223543D300CFCBDC /* Modules */,
 				E9B96868223571BE00CFCBDC /* Resources */,
 			);
 			path = Dota2Teams;
 			sourceTree = "<group>";
 		};
+		E9AB8348223D835500953939 /* Abstraction */ = {
+			isa = PBXGroup;
+			children = (
+				E9AB8349223D836E00953939 /* Coordinator.swift */,
+			);
+			path = Abstraction;
+			sourceTree = "<group>";
+		};
+		E9AB834B223D838C00953939 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				E9AB8342223D45B700953939 /* MainCoordinator.swift */,
+				E9AB8346223D5E3B00953939 /* TeamCoordinator.swift */,
+				E9AB8344223D5D2900953939 /* PlayerCoordinator.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		E9AB834C223E671600953939 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				E9AB834F223E68CF00953939 /* CoordinatorFactory.swift */,
+				E9AB834D223E672600953939 /* MainCoordinatorFactory.swift */,
+				E9AB8351223E68FB00953939 /* TeamCoordinatorFactory.swift */,
+				E9AB8353223E697A00953939 /* PlayerCoordinatorFactory.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 		E9B9683C2235437500CFCBDC /* Factories */ = {
 			isa = PBXGroup;
 			children = (
+				E9AB834C223E671600953939 /* Coordinators */,
 				E93771122237FB700086D990 /* ViewControllerFactory.swift */,
 				E9B9683D2235438000CFCBDC /* StoryboardViewControllerFactory.swift */,
 				E9B968482235449500CFCBDC /* TeamsViewControllerFactory.swift */,
@@ -207,12 +253,11 @@
 		E9B96840223543DF00CFCBDC /* Teams */ = {
 			isa = PBXGroup;
 			children = (
-				E957A001223B19730014EAC7 /* TeamPresenter.swift */,
-				E9B9687622358E3800CFCBDC /* TeamLayout.swift */,
 				E9B96841223543EB00CFCBDC /* TeamsViewController.swift */,
-				E9B968462235444C00CFCBDC /* Teams.storyboard */,
+				E9B9687622358E3800CFCBDC /* TeamLayout.swift */,
 				E9B968702235874500CFCBDC /* TeamCollectionViewCell.swift */,
 				E9B968712235874500CFCBDC /* TeamCollectionViewCell.xib */,
+				E9B968462235444C00CFCBDC /* Teams.storyboard */,
 			);
 			path = Teams;
 			sourceTree = "<group>";
@@ -420,25 +465,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9B9684C2235459200CFCBDC /* MainNavigationController.swift in Sources */,
-				E957A002223B19730014EAC7 /* TeamPresenter.swift in Sources */,
+				E9AB8352223E68FB00953939 /* TeamCoordinatorFactory.swift in Sources */,
+				E9AB8343223D45B700953939 /* MainCoordinator.swift in Sources */,
 				E9B968492235449500CFCBDC /* TeamsViewControllerFactory.swift in Sources */,
+				E9AB8345223D5D2900953939 /* PlayerCoordinator.swift in Sources */,
 				E9B968532235489700CFCBDC /* Team.swift in Sources */,
 				E93771132237FB700086D990 /* ViewControllerFactory.swift in Sources */,
 				E9464D4822382E8E00A3F595 /* Player.swift in Sources */,
 				E93771162237FFF40086D990 /* LoggingService.swift in Sources */,
+				E9AB834E223E672600953939 /* MainCoordinatorFactory.swift in Sources */,
 				E93771112237F8520086D990 /* LoadingViewControllerFactory.swift in Sources */,
 				E9B968562235498100CFCBDC /* Team+Coding.swift in Sources */,
 				E9B9683E2235438000CFCBDC /* StoryboardViewControllerFactory.swift in Sources */,
 				E9464D4122382C9700A3F595 /* PlayersViewController.swift in Sources */,
+				E9AB8354223E697A00953939 /* PlayerCoordinatorFactory.swift in Sources */,
 				E9AB8331223D0F9F00953939 /* PlayerTableViewCell.swift in Sources */,
 				E93771182238002B0086D990 /* ConsoleLoggingService.swift in Sources */,
+				E9AB8350223E68CF00953939 /* CoordinatorFactory.swift in Sources */,
 				E9464D4622382E2100A3F595 /* URL.swift in Sources */,
 				E9B9687922359CC600CFCBDC /* PlayedGamesFormatter.swift in Sources */,
+				E9AB834A223D836E00953939 /* Coordinator.swift in Sources */,
 				E9B9686E22357A5900CFCBDC /* TeamWebService.swift in Sources */,
 				E9B9687722358E3800CFCBDC /* TeamLayout.swift in Sources */,
 				E9464D4F2238302B00A3F595 /* PlayerService.swift in Sources */,
 				E9B9685C22354EAB00CFCBDC /* ApiUrls.swift in Sources */,
 				E9464D4322382D3300A3F595 /* PlayersViewControllerFactory.swift in Sources */,
+				E9AB8347223D5E3B00953939 /* TeamCoordinator.swift in Sources */,
 				E9464D4A22382EF200A3F595 /* Player+Coding.swift in Sources */,
 				E9B96842223543EB00CFCBDC /* TeamsViewController.swift in Sources */,
 				E9B9686322356FAF00CFCBDC /* LoadingViewController.swift in Sources */,

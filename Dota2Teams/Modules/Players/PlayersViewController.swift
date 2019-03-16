@@ -12,9 +12,9 @@ class PlayersViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var teamID = 0
-    var service: PlayerService?
+    private var service: PlayerService?
     var players = [Player]()
+    var team: Team?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +27,10 @@ class PlayersViewController: UIViewController {
     }
 }
 
-extension PlayersViewController {
+private extension PlayersViewController {
     func loadPlayers() {
-        service?.loadPlayers(from: teamID, completion: { [weak self] players, error in
+        guard let team = team else { return }
+        service?.loadPlayers(from: team.id, completion: { [weak self] players, error in
             guard let players = players else { return }
             self?.players = players
             self?.tableView.reloadData()
